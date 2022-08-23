@@ -1,0 +1,14 @@
+{
+    "header": {
+        "web-title": "Weather Forecast",
+        "change-text": "You can change the language here"
+    },
+    "content": {
+        "button-click": "Search",
+        "input-placeholder": "Search Weather by City",
+        "subheading": "Weather Forecast On",
+        "min-temp": "Min. Temp",
+        "max-temp": "Max. Temp",
+        "language":"en"
+    }
+}

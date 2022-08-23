@@ -1,0 +1,14 @@
+{
+    "header": {
+        "web-title": "Prónostico del clima",
+        "change-text": "Puedes cambiar el idioma aqui"
+    },
+    "content": {
+        "button-click": "Busca",
+        "input-placeholder": "Buscar tiempo °C por ciudad",
+        "subheading": "Pronóstico del tiempo para el día de hoy",
+        "min-temp": "Temperatura Mínima",
+        "max-temp": "Temperatura Máxima",
+        "language":"es"
+    }
+}
