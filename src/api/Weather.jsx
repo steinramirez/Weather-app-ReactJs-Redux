@@ -14,7 +14,8 @@ class Weather extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchInput: ""
+      searchInput: "",
+      lang:"en",
     };
   }
 
@@ -26,12 +27,17 @@ class Weather extends React.Component {
     e.preventDefault();
     const { searchInput } = this.state;
     const { GetWeatherDetails } = this.props.action;
-    if (searchInput) GetWeatherDetails(this.state.searchInput);
+    if (searchInput) GetWeatherDetails(this.state.searchInput , this.state.lang);
     this.setState({ searchInput: "" });
   };
   handleOnChange = e => {
     this.setState({
       searchInput: e.target.value
+    });
+  };
+  handleLanguage = e => {
+    this.setState({
+      lang : "es",
     });
   };
   handleOnClick = e => {
@@ -48,7 +54,7 @@ class Weather extends React.Component {
     const { weather, sys, name, main } = data;
     const { searchInput } = this.state;
     const { t } = this.props;
-    const current = new Date();
+    
     return (
       <>
         <div className="container">
@@ -124,14 +130,9 @@ class Weather extends React.Component {
           </div>
 
         </div>
-        <div className="footer">Weather App . Stein Ramirez   {current.getDate()}/
-          {current.getMonth() + 1}/ 
-          {current.getFullYear()} <></> 
-          {current.getHours()}:
-          {current.getMinutes()}:
-          {current.getSeconds()}</div>
+        
         <ToastContainer />
-
+        
       </>
     );
   }

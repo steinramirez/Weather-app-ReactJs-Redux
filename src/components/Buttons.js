@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Buttons() {
     const [t, i18n] = useTranslation("global");
+    
 
     return (
         
